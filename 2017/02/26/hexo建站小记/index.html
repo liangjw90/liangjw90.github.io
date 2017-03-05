@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://maokz.com">
+  <link rel="dns-prefetch" href="http://blog.maokz.com">
   <title>hexo建站小记 | 猫客栈-夜猫归属</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="安装过程，网上有很多，简单来说：
@@ -18,7 +18,7 @@
 hexo init yourname cd yourname npm install,其中your">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo建站小记">
-<meta property="og:url" content="http://maokz.com/2017/02/26/hexo建站小记/index.html">
+<meta property="og:url" content="http://blog.maokz.com/2017/02/26/hexo建站小记/index.html">
 <meta property="og:site_name" content="猫客栈-夜猫归属">
 <meta property="og:description" content="安装过程，网上有很多，简单来说：
 就是github上名为建立:username.github.io的仓库
@@ -28,7 +28,7 @@ hexo init yourname cd yourname npm install,其中your">
 通过npm安装hexo，npm install -g hexo-cli便可以安装完成  
 终端cd进入到需要建立博客目录的目录  
 hexo init yourname cd yourname npm install,其中your">
-<meta property="og:updated_time" content="2017-02-26T18:09:28.182Z">
+<meta property="og:updated_time" content="2017-02-27T09:32:40.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo建站小记">
 <meta name="twitter:description" content="安装过程，网上有很多，简单来说：
@@ -224,7 +224,8 @@ var _hmt = _hmt || [];
 <li><code>hexo init yourname</code> <code>cd yourname</code> <code>npm install</code>,其中yourname可以任意设置  </li>
 <li>到yourname目录，找到 <code>_config.yml</code>文件，上方配置语言名称时区，语言 <code>zh-CN</code>,时区： <code>Asia/Shanghai</code>最下方配置： <code>type: git</code> <code>repo: https://github.com/yourusername/yourusername.github.io</code> <code>branch: master</code>  </li>
 <li>然后在终端输入 <code>hexo s</code>  然后便可以在 <code>localhost:4000</code> 中查看你的网站了。  </li>
-<li>发布：终端里 <code>hexo clean</code>//清除缓存 <code>hexo g</code>//生产本地发布文件夹 <code>hexo d</code>//发布到gitpages上。  </li>
+<li>发布：终端里 <code>hexo clean</code>//清除缓存 <code>hexo g</code>//生产本地发布文件夹 <code>hexo d</code>//发布到gitpages上.    </li>
+<li>注意：在hexo的 <code>_config.yml</code> 里面有域名设置，注意和域名注册商里设置的CNAME里的相同。否则，每次发布将以 <code>_config.yml</code>设置地址覆盖到github的设置里。若出意外，可以在 <code>sourse</code>文件夹里建立一个 <code>`CNAME</code><br>` 文件,并在里面写上自定义域名</li>
 </ul>
 <h3 id="安装后当然需要日常填坑了（windows系统）"><a href="#安装后当然需要日常填坑了（windows系统）" class="headerlink" title="安装后当然需要日常填坑了（windows系统）"></a>安装后当然需要日常填坑了（windows系统）</h3><h4 id="坑1：-ERROR-Deployer-not-found-git"><a href="#坑1：-ERROR-Deployer-not-found-git" class="headerlink" title="坑1： ERROR Deployer not found: git"></a>坑1： <code>ERROR Deployer not found: git</code></h4><ul>
 <li>这个问题，据说hexo更新3.0后， <code>deploy</code>里的 <code>type</code> 徐亚欧由 <code>github</code>改为 <code>git</code>。但是我已经填写 <code>git</code> ，所以排除。    </li>
@@ -322,7 +323,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://maokz.com/2017/02/26/hexo建站小记/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.maokz.com/2017/02/26/hexo建站小记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,6 +336,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/03/03/linux切图取色软件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          linux切图取色等软件
+        
+      </div>
+    </a>
   
   
     <a href="/2017/02/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -352,7 +362,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo建站小记" data-title="hexo建站小记" data-url="http://maokz.com/2017/02/26/hexo建站小记/"></div>
+	<div class="ds-thread" data-thread-key="hexo建站小记" data-title="hexo建站小记" data-url="http://blog.maokz.com/2017/02/26/hexo建站小记/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -464,7 +474,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">fecs 前端 sublime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">linux 绘图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">linux 前端 取色 切图</a>
               </li>
             
             <div class="clearfix"></div>
@@ -520,7 +542,11 @@ var _hmt = _hmt || [];
             </li>
           
             <li class="search-li">
-              <a href="http://emufan.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>soul</a>
+              <a href="https://zh.snipaste.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>snipaste</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://emufan.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>soul博客</a>
             </li>
           
             <li class="search-li">
