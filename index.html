@@ -266,7 +266,7 @@ var _hmt = _hmt || [];
 
         
         <a href="/2017/03/07/linux下管理efi启动项/" class="archive-article-date">
-  	<time datetime="2017-03-07T01:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+  	<time datetime="2017-03-07T13:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
 </a>
         
       </header>
@@ -274,18 +274,17 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>本文将通过linux下的efibootmgr对efi启动项进行管理    </p>
-<h4 id="启动efibootmgr及查看"><a href="#启动efibootmgr及查看" class="headerlink" title="启动efibootmgr及查看"></a>启动efibootmgr及查看</h4><p>不需要安装，直接在终端输入 <code>efibootmgr</code> ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 <code>*</code>的项目为已启动，禁用的项目后是没有星号的，如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">BootCurrent: 0008 //当前启动项，如下所示为deepin</div><div class="line">Timeout: 0 seconds</div><div class="line">BootOrder: 0005,0004,0007,0008,0003,0002,0001,0000,2001,2002,2003 //启动顺序，本机第一项0005即window的启动管理器</div><div class="line">Boot0000* Realtek PXE B08 D00 //若被禁用，将显示为Boot0000 Realtek...</div><div class="line">Boot0001* hp       CDDVDW TS-U633J        </div><div class="line">Boot0002* HGST HTS7210xxxxx0            </div><div class="line">Boot0003* HFS128G3AMNM-1xxxA              </div><div class="line">Boot0004* ubuntuA</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line">Boot2001* EFI USB Device</div><div class="line">Boot2002* EFI DVD/CDROM</div><div class="line">Boot2003* EFI Network</div></pre></td></tr></table></figure>
-<h4 id="下列操作若权限不足，可在命令前加sudo"><a href="#下列操作若权限不足，可在命令前加sudo" class="headerlink" title="下列操作若权限不足，可在命令前加sudo"></a>下列操作若权限不足，可在命令前加sudo</h4><h4 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr -b X -B  //删除标号为X的启动项</div></pre></td></tr></table></figure>
-<p>例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">liangjw90@liangjw90-PC:~$ efibootmgr</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0004,0007,0008</div><div class="line">Boot0004* ubuntu</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line"></div><div class="line">efibootmgr -b 0004 -B  //删除0004对应的ubuntu</div><div class="line">liangjw90@liangjw90-PC:~$ sudo efibootmgr -b 0004 -B //可能需要加sudo进行操作</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0007,0008 //0004已经删除</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div></pre></td></tr></table></figure>
-<h4 id="添加引导"><a href="#添加引导" class="headerlink" title="添加引导"></a>添加引导</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -c -w -L <span class="string">"BootOptionName"</span> <span class="_">-d</span> /dev/sda -p 1 <span class="_">-l</span></div><div class="line">\\EFI\\asianux\\elilo.efi</div></pre></td></tr></table></figure>
-<p>其中 <code>-d</code> 参数后面是系统所在的硬盘设备名称，例如 <code>/dev/hda</code>、 <code>/dev/hdb</code>    </p>
-<p> <code>-p</code> 参数是 <code>vfat</code> 分区的分区编号 ，<code>/dev/hda1</code>  用 <code>-p 1</code>，<code>/dev/sda2</code> 用 <code>-p 2</code><br><code>-l</code> 参数后面是该引导项指向的efi 启动文件在该分区上的位置。请注意使用“\”来表示目录的分级。<br>例如： <code>/EFI/asianux/elilo.efi</code><br>应写成： <code>\\EFI\\asianux\\elilo.efi</code></p>
-<h4 id="修改启动顺序"><a href="#修改启动顺序" class="headerlink" title="修改启动顺序"></a>修改启动顺序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr  -o X,Y  //指定标号为X的启动项顺序在Y之前</div></pre></td></tr></table></figure>
-<h4 id="禁用-启用boot-option"><a href="#禁用-启用boot-option" class="headerlink" title="禁用/启用boot option"></a>禁用/启用boot option</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -a -b X   //启用标号为X的启动项 </div><div class="line">efibootmgr -A -b X   //禁用标号为X的启动项</div></pre></td></tr></table></figure>
-<p>双系统中，也可以通过该方法以使grub默认引导双系统</p>
-<h4 id="windows下管理"><a href="#windows下管理" class="headerlink" title="windows下管理"></a>windows下管理</h4><p>windows下，可以直接下载使用easyUEFI管理，图形化界面，相信不用我介绍怎么使用了</p>
+<h4 id="启动EFIBOOTMGR及查看"><a href="#启动EFIBOOTMGR及查看" class="headerlink" title="启动EFIBOOTMGR及查看"></a>启动EFIBOOTMGR及查看</h4><p>不需要安装，直接在终端输入 <code>efibootmgr</code> ,回车，变可以看到 <code>bootcurrent</code>，启动顺序等。其中项目后有星号 <code>*</code> 的项目为已启动，禁用的项目后是没有星号的，如下：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">BootCurrent: 0008 //当前启动项，如下所示为deepin</div><div class="line">Timeout: 0 seconds</div><div class="line">BootOrder: 0005,0004,0007,0008,0003,0002,0001,0000,2001,2002,2003 //启动顺序，本机第一项0005即window的启动管理器</div><div class="line">Boot0000* Realtek PXE B08 D00 //若被禁用，将显示为Boot0000 Realtek...</div><div class="line">Boot0001* hp       CDDVDW TS-U633J        </div><div class="line">Boot0002* HGST HTS7210xxxxx0            </div><div class="line">Boot0003* HFS128G3AMNM-1xxxA              </div><div class="line">Boot0004* ubuntuA</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line">Boot2001* EFI USB Device</div><div class="line">Boot2002* EFI DVD/CDROM</div><div class="line">Boot2003* EFI Network</div></pre></td></tr></table></figure></p>
+<h4 id="下列操作若权限不足，可在命令前加SUDO"><a href="#下列操作若权限不足，可在命令前加SUDO" class="headerlink" title="下列操作若权限不足，可在命令前加SUDO"></a>下列操作若权限不足，可在命令前加SUDO</h4><h5 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr -b X -B  //删除标号为X的启动项</div></pre></td></tr></table></figure>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">liangjw90@liangjw90-PC:~$ efibootmgr</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0004,0007,0008</div><div class="line">Boot0004* ubuntu</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line">efibootmgr -b 0004 -B  //删除0004对应的ubuntu</div><div class="line">liangjw90@liangjw90-PC:~$ sudo efibootmgr -b 0004 -B //可能需要加sudo进行操作</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0007,0008 //0004已经删除</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div></pre></td></tr></table></figure></p>
+<h5 id="添加引导"><a href="#添加引导" class="headerlink" title="添加引导"></a>添加引导</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -c -w -L &quot;BootOptionName&quot; -d /dev/sda -p 1 -l</div><div class="line">\\EFI\\asianux\\elilo.efi</div></pre></td></tr></table></figure>
+<p>其中 <code>-d</code> 参数后面是系统所在的硬盘设备名称，例如 <code>/dev/hda</code>、 <code>/dev/hdb</code></p>
+<p><code>-p</code> 参数是 <code>vfat</code> 分区的分区编号 ， <code>/dev/hda1</code> 用 <code>-p 1</code>， <code>/dev/sda2</code> 用 <code>-p 2</code><br><code>-l</code> 参数后面是该引导项指向的efi启动文件在该分区上的位置。请注意使用“\”来表示目录的分级。<br>例如： <code>/EFI/asianux/elilo.efi</code><br>应写成： <code>\\EFI\\asianux\\elilo.efi</code></p>
+<h5 id="修改启动顺序"><a href="#修改启动顺序" class="headerlink" title="修改启动顺序"></a>修改启动顺序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr  -o X,Y  //指定标号为X的启动项顺序在Y之前</div></pre></td></tr></table></figure>
+<h5 id="禁用-启用BOOT-OPTION"><a href="#禁用-启用BOOT-OPTION" class="headerlink" title="禁用/启用BOOT OPTION"></a>禁用/启用BOOT OPTION</h5><pre><code>efibootmgr -a -b X   //启用标号为X的启动项 
+efibootmgr -A -b X   //禁用标号为X的启动项
+</code></pre><p>双系统中，也可以通过该方法以使grub默认引导双系统</p>
+<h5 id="WINDOWS下管理"><a href="#WINDOWS下管理" class="headerlink" title="WINDOWS下管理"></a>WINDOWS下管理</h5><p>windows下，可以直接下载使用easyUEFI管理，图形化界面，相信不用我介绍怎么使用了</p>
 
       
 
@@ -411,72 +410,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-linux创作类软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/linux创作类软件/">linux图像创作类软件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/03/linux创作类软件/" class="archive-article-date">
-  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Krita"><a href="#Krita" class="headerlink" title="Krita"></a>Krita</h4><p>Krita是一个免费、开源的专业绘画软件。它由一些希望让每个人都能用得起创作工具的艺术家创造。概念艺术图，数字绘景，插画和漫画：![官网]{<a href="https://krita.org/zh/}" target="_blank" rel="external">https://krita.org/zh/}</a>      </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">绘图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/03/linux创作类软件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-linux切图取色软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -517,11 +450,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -540,6 +473,72 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/03/linux切图取色软件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux创作类软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/linux创作类软件/">linux图像创作类软件</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/03/linux创作类软件/" class="archive-article-date">
+  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Krita"><a href="#Krita" class="headerlink" title="Krita"></a>Krita</h4><p>Krita是一个免费、开源的专业绘画软件。它由一些希望让每个人都能用得起创作工具的艺术家创造。概念艺术图，数字绘景，插画和漫画：![官网]{<a href="https://krita.org/zh/}" target="_blank" rel="external">https://krita.org/zh/}</a>     </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">绘图</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/03/linux创作类软件/">展开全文 >></a>
         </p>
       
 
@@ -825,26 +824,6 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">efi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">fecs</a>
               </li>
              
@@ -857,15 +836,23 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">webstorm</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">efi</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -874,6 +861,18 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">切图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">webstorm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
