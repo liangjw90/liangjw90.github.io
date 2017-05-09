@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.maokz.com">
-  <title>Tag: 前端 | 猫客栈-夜猫归属</title>
+  <title>linux下管理efi启动项 | 猫客栈-夜猫归属</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人经验分享总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猫客栈-夜猫归属">
-<meta property="og:url" content="http://blog.maokz.com/tags/前端/index.html">
+  <meta name="description" content="简介本文将通过linux下的efibootmgr对efi启动项进行管理    
+启动efibootmgr及查看不需要安装，直接在终端输入 efibootmgr ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 *的项目为已启动，禁用的项目后是没有星号的，如下：
+1234567891011121314BootCurrent: 0008 //当前启动项，如下所示为deepinTi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下管理efi启动项">
+<meta property="og:url" content="http://blog.maokz.com/2017/03/07/linux下管理efi启动项/index.html">
 <meta property="og:site_name" content="猫客栈-夜猫归属">
-<meta property="og:description" content="个人经验分享总结">
+<meta property="og:description" content="简介本文将通过linux下的efibootmgr对efi启动项进行管理    
+启动efibootmgr及查看不需要安装，直接在终端输入 efibootmgr ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 *的项目为已启动，禁用的项目后是没有星号的，如下：
+1234567891011121314BootCurrent: 0008 //当前启动项，如下所示为deepinTi">
+<meta property="og:updated_time" content="2017-03-09T08:25:58.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猫客栈-夜猫归属">
-<meta name="twitter:description" content="个人经验分享总结">
+<meta name="twitter:title" content="linux下管理efi启动项">
+<meta name="twitter:description" content="简介本文将通过linux下的efibootmgr对efi启动项进行管理    
+启动efibootmgr及查看不需要安装，直接在终端输入 efibootmgr ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 *的项目为已启动，禁用的项目后是没有星号的，如下：
+1234567891011121314BootCurrent: 0008 //当前启动项，如下所示为deepinTi">
   
     <link rel="alternative" href="/atom.xml" title="猫客栈-夜猫归属" type="application/atom+xml">
   
@@ -172,132 +179,47 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux下管理efi启动项" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux下管理efi启动项
+    </h1>
+  
+
+        
+        <a href="/2017/03/07/linux下管理efi启动项/" class="archive-article-date">
+  	<time datetime="2017-03-07T01:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>本文将通过linux下的efibootmgr对efi启动项进行管理    </p>
+<h4 id="启动efibootmgr及查看"><a href="#启动efibootmgr及查看" class="headerlink" title="启动efibootmgr及查看"></a>启动efibootmgr及查看</h4><p>不需要安装，直接在终端输入 <code>efibootmgr</code> ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 <code>*</code>的项目为已启动，禁用的项目后是没有星号的，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">BootCurrent: 0008 //当前启动项，如下所示为deepin</div><div class="line">Timeout: 0 seconds</div><div class="line">BootOrder: 0005,0004,0007,0008,0003,0002,0001,0000,2001,2002,2003 //启动顺序，本机第一项0005即window的启动管理器</div><div class="line">Boot0000* Realtek PXE B08 D00 //若被禁用，将显示为Boot0000 Realtek...</div><div class="line">Boot0001* hp       CDDVDW TS-U633J        </div><div class="line">Boot0002* HGST HTS7210xxxxx0            </div><div class="line">Boot0003* HFS128G3AMNM-1xxxA              </div><div class="line">Boot0004* ubuntuA</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line">Boot2001* EFI USB Device</div><div class="line">Boot2002* EFI DVD/CDROM</div><div class="line">Boot2003* EFI Network</div></pre></td></tr></table></figure>
+<h4 id="下列操作若权限不足，可在命令前加sudo"><a href="#下列操作若权限不足，可在命令前加sudo" class="headerlink" title="下列操作若权限不足，可在命令前加sudo"></a>下列操作若权限不足，可在命令前加sudo</h4><h4 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr -b X -B  //删除标号为X的启动项</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">liangjw90@liangjw90-PC:~$ efibootmgr</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0004,0007,0008</div><div class="line">Boot0004* ubuntu</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line"></div><div class="line">efibootmgr -b 0004 -B  //删除0004对应的ubuntu</div><div class="line">liangjw90@liangjw90-PC:~$ sudo efibootmgr -b 0004 -B //可能需要加sudo进行操作</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0007,0008 //0004已经删除</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div></pre></td></tr></table></figure>
+<h4 id="添加引导"><a href="#添加引导" class="headerlink" title="添加引导"></a>添加引导</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -c -w -L <span class="string">"BootOptionName"</span> <span class="_">-d</span> /dev/sda -p 1 <span class="_">-l</span></div><div class="line">\\EFI\\asianux\\elilo.efi</div></pre></td></tr></table></figure>
+<p>其中 <code>-d</code> 参数后面是系统所在的硬盘设备名称，例如 <code>/dev/hda</code>、 <code>/dev/hdb</code>    </p>
+<p> <code>-p</code> 参数是 <code>vfat</code> 分区的分区编号 ，<code>/dev/hda1</code>  用 <code>-p 1</code>，<code>/dev/sda2</code> 用 <code>-p 2</code><br><code>-l</code> 参数后面是该引导项指向的efi 启动文件在该分区上的位置。请注意使用“\”来表示目录的分级。<br>例如： <code>/EFI/asianux/elilo.efi</code><br>应写成： <code>\\EFI\\asianux\\elilo.efi</code></p>
+<h4 id="修改启动顺序"><a href="#修改启动顺序" class="headerlink" title="修改启动顺序"></a>修改启动顺序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr  -o X,Y  //指定标号为X的启动项顺序在Y之前</div></pre></td></tr></table></figure>
+<h4 id="禁用-启用boot-option"><a href="#禁用-启用boot-option" class="headerlink" title="禁用/启用boot option"></a>禁用/启用boot option</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -a -b X   //启用标号为X的启动项 </div><div class="line">efibootmgr -A -b X   //禁用标号为X的启动项</div></pre></td></tr></table></figure>
+<p>双系统中，也可以通过该方法以使grub默认引导双系统</p>
+<h4 id="windows下管理"><a href="#windows下管理" class="headerlink" title="windows下管理"></a>windows下管理</h4><p>windows下，可以直接下载使用easyUEFI管理，图形化界面，相信不用我介绍怎么使用了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/配置sublime及webstorm以支持vue/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/配置sublime及webstorm以支持vue/">配置sublime及webstorm以支持vue</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">webstorm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/05/fecs安装及配置/" class="archive-article-date">
-  	<time datetime="2017-03-05T10:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/05/fecs安装及配置/">fecs安装及配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">fecs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/03/linux切图取色软件/" class="archive-article-date">
-  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/03/linux切图取色软件/">linux切图取色等软件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -307,33 +229,121 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取色</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">切图</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">efi</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.maokz.com/2017/03/07/linux下管理efi启动项/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/09/配置sublime及webstorm以支持vue/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          配置sublime及webstorm以支持vue
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/03/05/fecs安装及配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fecs安装及配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="linux下管理efi启动项" data-title="linux下管理efi启动项" data-url="http://blog.maokz.com/2017/03/07/linux下管理efi启动项/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"maokz"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -356,9 +366,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

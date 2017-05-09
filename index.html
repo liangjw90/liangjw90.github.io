@@ -174,6 +174,163 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-配置sublime及webstorm以支持vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/09/配置sublime及webstorm以支持vue/">配置sublime及webstorm以支持vue</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/09/配置sublime及webstorm以支持vue/" class="archive-article-date">
+  	<time datetime="2017-03-09T08:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>因为sublime及webstorm原生并没有支持vue，故本文简单介绍如何配置以支持vue    </p>
+<h4 id="sublime"><a href="#sublime" class="headerlink" title="sublime"></a>sublime</h4><p><code>ctrl+shift+P</code> 搜索vue,安装 <code>Vue Syntax Hightlight</code>插件，点击回车键安装即可。重新打开便可高亮代码。<br>另外， <code>Vuejs Snippets</code>也可以按需选择安装</p>
+<p>格式化vue文件，安装 <code>HTML/CSS/JS Prettify</code>,安装后 <code>tools-&gt;HTML/CSS/JS Prettify-&gt;set prettify preference</code>, 如下加上 <code>vue</code>就好了    </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;allowed_file_extensions&quot;: [&quot;htm&quot;, &quot;html&quot;, &quot;xhtml&quot;, &quot;shtml&quot;, &quot;xml&quot;, &quot;svg&quot;,&quot;vue&quot;]</div></pre></td></tr></table></figure>
+<h4 id="webStorm"><a href="#webStorm" class="headerlink" title="webStorm"></a>webStorm</h4><p><code>File-settings-Editor-Code Style-Live Templates</code><br>在 <code>html/xml</code>下按右侧加号，增加 <code>Live Templates</code>， <code>Abbreviation:vue</code>, <code>Description:vue template</code>,  <code>Template text</code>可以参考如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">    &lt;div class=&quot;class&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">    export default&#123;</div><div class="line">        components:&#123;&#125;，</div><div class="line">        computed:&#123;&#125;,</div><div class="line">        props:[],</div><div class="line">        data()&#123;</div><div class="line">            return&#123;</div><div class="line">            &#125;;</div><div class="line">         &#125;,</div><div class="line">         methods:&#123;</div><div class="line">         &#125;,</div><div class="line">         mounted()&#123;</div><div class="line">         &#125;</div><div class="line">     &#125;;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style scoped lang=&quot;less&quot; rel=&quot;stylesheet/less&quot;&gt;</div><div class="line">    .index&#123;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">webstorm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/09/配置sublime及webstorm以支持vue/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux下管理efi启动项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/linux下管理efi启动项/">linux下管理efi启动项</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/07/linux下管理efi启动项/" class="archive-article-date">
+  	<time datetime="2017-03-07T01:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>本文将通过linux下的efibootmgr对efi启动项进行管理    </p>
+<h4 id="启动efibootmgr及查看"><a href="#启动efibootmgr及查看" class="headerlink" title="启动efibootmgr及查看"></a>启动efibootmgr及查看</h4><p>不需要安装，直接在终端输入 <code>efibootmgr</code> ,回车，变可以看到bootcurrent，启动顺序等。其中项目后有星号 <code>*</code>的项目为已启动，禁用的项目后是没有星号的，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">BootCurrent: 0008 //当前启动项，如下所示为deepin</div><div class="line">Timeout: 0 seconds</div><div class="line">BootOrder: 0005,0004,0007,0008,0003,0002,0001,0000,2001,2002,2003 //启动顺序，本机第一项0005即window的启动管理器</div><div class="line">Boot0000* Realtek PXE B08 D00 //若被禁用，将显示为Boot0000 Realtek...</div><div class="line">Boot0001* hp       CDDVDW TS-U633J        </div><div class="line">Boot0002* HGST HTS7210xxxxx0            </div><div class="line">Boot0003* HFS128G3AMNM-1xxxA              </div><div class="line">Boot0004* ubuntuA</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line">Boot2001* EFI USB Device</div><div class="line">Boot2002* EFI DVD/CDROM</div><div class="line">Boot2003* EFI Network</div></pre></td></tr></table></figure>
+<h4 id="下列操作若权限不足，可在命令前加sudo"><a href="#下列操作若权限不足，可在命令前加sudo" class="headerlink" title="下列操作若权限不足，可在命令前加sudo"></a>下列操作若权限不足，可在命令前加sudo</h4><h4 id="删除启动项"><a href="#删除启动项" class="headerlink" title="删除启动项"></a>删除启动项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr -b X -B  //删除标号为X的启动项</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">liangjw90@liangjw90-PC:~$ efibootmgr</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0004,0007,0008</div><div class="line">Boot0004* ubuntu</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div><div class="line"></div><div class="line">efibootmgr -b 0004 -B  //删除0004对应的ubuntu</div><div class="line">liangjw90@liangjw90-PC:~$ sudo efibootmgr -b 0004 -B //可能需要加sudo进行操作</div><div class="line">BootCurrent: 0008</div><div class="line">BootOrder: 0005,0007,0008 //0004已经删除</div><div class="line">Boot0005* Windows Boot Manager</div><div class="line">Boot0007* Windows Boot Manager</div><div class="line">Boot0008* deepin</div></pre></td></tr></table></figure>
+<h4 id="添加引导"><a href="#添加引导" class="headerlink" title="添加引导"></a>添加引导</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -c -w -L <span class="string">"BootOptionName"</span> <span class="_">-d</span> /dev/sda -p 1 <span class="_">-l</span></div><div class="line">\\EFI\\asianux\\elilo.efi</div></pre></td></tr></table></figure>
+<p>其中 <code>-d</code> 参数后面是系统所在的硬盘设备名称，例如 <code>/dev/hda</code>、 <code>/dev/hdb</code>    </p>
+<p> <code>-p</code> 参数是 <code>vfat</code> 分区的分区编号 ，<code>/dev/hda1</code>  用 <code>-p 1</code>，<code>/dev/sda2</code> 用 <code>-p 2</code><br><code>-l</code> 参数后面是该引导项指向的efi 启动文件在该分区上的位置。请注意使用“\”来表示目录的分级。<br>例如： <code>/EFI/asianux/elilo.efi</code><br>应写成： <code>\\EFI\\asianux\\elilo.efi</code></p>
+<h4 id="修改启动顺序"><a href="#修改启动顺序" class="headerlink" title="修改启动顺序"></a>修改启动顺序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">efibootmgr  -o X,Y  //指定标号为X的启动项顺序在Y之前</div></pre></td></tr></table></figure>
+<h4 id="禁用-启用boot-option"><a href="#禁用-启用boot-option" class="headerlink" title="禁用/启用boot option"></a>禁用/启用boot option</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">efibootmgr -a -b X   //启用标号为X的启动项 </div><div class="line">efibootmgr -A -b X   //禁用标号为X的启动项</div></pre></td></tr></table></figure>
+<p>双系统中，也可以通过该方法以使grub默认引导双系统</p>
+<h4 id="windows下管理"><a href="#windows下管理" class="headerlink" title="windows下管理"></a>windows下管理</h4><p>windows下，可以直接下载使用easyUEFI管理，图形化界面，相信不用我介绍怎么使用了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">efi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/07/linux下管理efi启动项/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-fecs安装及配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -254,86 +411,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-linux切图取色软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/linux切图取色软件/">linux切图取色等软件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/03/linux切图取色软件/" class="archive-article-date">
-  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="h5psd-在线psd切图"><a href="#h5psd-在线psd切图" class="headerlink" title="h5psd-在线psd切图"></a>h5psd-在线psd切图</h4><p>小型切图适用：![在线]{<a href="http://jhtmls.com/h5psd/}" target="_blank" rel="external">http://jhtmls.com/h5psd/}</a>  ![github]{<a href="https://github.com/zswang/h5psd}" target="_blank" rel="external">https://github.com/zswang/h5psd}</a>    </p>
-<h4 id="Puzzler-快速切图并导出html（多平台）"><a href="#Puzzler-快速切图并导出html（多平台）" class="headerlink" title="Puzzler-快速切图并导出html（多平台）"></a>Puzzler-快速切图并导出html（多平台）</h4><p>Puzzler 是一个高效快速的前端页面切图工具，用于将一张图片快速切割成切片并导出 HTML 文件， 所有的工作都通过可视化拖拽完成，让你从重复的 PSD 切图工作中解放出来。Puzzler 的愿景是拯救 ♥ 切图仔！ ![github]{<a href="https://github.com/superRaytin/puzzler}" target="_blank" rel="external">https://github.com/superRaytin/puzzler}</a></p>
-<h4 id="Pick-简单好用的取色软件"><a href="#Pick-简单好用的取色软件" class="headerlink" title="Pick-简单好用的取色软件"></a>Pick-简单好用的取色软件</h4><p>界面简单，第一次打开，界面的简洁或许会让你有点意外，连取色按钮都没有，其实左上角的取色按钮就是取色按钮，所取颜色在下方有记录，并可以按需选择色值的格式。</p>
-<h4 id="Gpick-linux下强大的取色软件"><a href="#Gpick-linux下强大的取色软件" class="headerlink" title="Gpick-linux下强大的取色软件"></a>Gpick-linux下强大的取色软件</h4><p>试了几个软件，这个软件比较好用，功能强大。第一次使用需要到首选项作一些行为的定义，例如取色时单击会复制当时所选颜色到的色值到剪切板。安装方法也简单：    </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install gpick</div></pre></td></tr></table></figure>
-<h4 id="Brackets-是编辑器，也是切图的好帮手"><a href="#Brackets-是编辑器，也是切图的好帮手" class="headerlink" title="Brackets-是编辑器，也是切图的好帮手"></a>Brackets-是编辑器，也是切图的好帮手</h4><p>这个不用多介绍了吧？Brackets是一个HTML/CSS/JavaScrip前端WEB集成开发环境，它提供了快捷键设置、快速编辑、实时预览、代码隐藏与搜索、界面优化、内建取色器、代码/样式扩展等功能。前端应该都认识，虽然不一定使用，但相信都听过其大名![Brackets]{<a href="http://http://brackets.io/}" target="_blank" rel="external">http://http://brackets.io/}</a>    </p>
-<h4 id="Pxcook-像素大师（仅建议win平台与Mac平台使用）"><a href="#Pxcook-像素大师（仅建议win平台与Mac平台使用）" class="headerlink" title="Pxcook-像素大师（仅建议win平台与Mac平台使用）"></a>Pxcook-像素大师（仅建议win平台与Mac平台使用）</h4><p>Adobe Air平台的跨平台软件，智能标注，单位转换，取色，psd切图，功能强大。使用时先安装Adobe Air,再安装Pxcook;<br>但是Adobe早已停止Air对linux平台的支持，只能找旧版的Air2.6安装，因此可以的话，linux的话还是选择其他比较好。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取色</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">切图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/03/linux切图取色软件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-linux创作类软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -383,6 +460,86 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/03/linux创作类软件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux切图取色软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/linux切图取色软件/">linux切图取色等软件</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/03/linux切图取色软件/" class="archive-article-date">
+  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="h5psd-在线psd切图"><a href="#h5psd-在线psd切图" class="headerlink" title="h5psd-在线psd切图"></a>h5psd-在线psd切图</h4><p>小型切图适用：![在线]{<a href="http://jhtmls.com/h5psd/}" target="_blank" rel="external">http://jhtmls.com/h5psd/}</a>  ![github]{<a href="https://github.com/zswang/h5psd}" target="_blank" rel="external">https://github.com/zswang/h5psd}</a>    </p>
+<h4 id="Puzzler-快速切图并导出html（多平台）"><a href="#Puzzler-快速切图并导出html（多平台）" class="headerlink" title="Puzzler-快速切图并导出html（多平台）"></a>Puzzler-快速切图并导出html（多平台）</h4><p>Puzzler 是一个高效快速的前端页面切图工具，用于将一张图片快速切割成切片并导出 HTML 文件， 所有的工作都通过可视化拖拽完成，让你从重复的 PSD 切图工作中解放出来。Puzzler 的愿景是拯救 ♥ 切图仔！ ![github]{<a href="https://github.com/superRaytin/puzzler}" target="_blank" rel="external">https://github.com/superRaytin/puzzler}</a></p>
+<h4 id="Pick-简单好用的取色软件"><a href="#Pick-简单好用的取色软件" class="headerlink" title="Pick-简单好用的取色软件"></a>Pick-简单好用的取色软件</h4><p>界面简单，第一次打开，界面的简洁或许会让你有点意外，连取色按钮都没有，其实左上角的取色按钮就是取色按钮，所取颜色在下方有记录，并可以按需选择色值的格式。</p>
+<h4 id="Gpick-linux下强大的取色软件"><a href="#Gpick-linux下强大的取色软件" class="headerlink" title="Gpick-linux下强大的取色软件"></a>Gpick-linux下强大的取色软件</h4><p>试了几个软件，这个软件比较好用，功能强大。第一次使用需要到首选项作一些行为的定义，例如取色时单击会复制当时所选颜色到的色值到剪切板。安装方法也简单：    </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install gpick</div></pre></td></tr></table></figure>
+<h4 id="Brackets-是编辑器，也是切图的好帮手"><a href="#Brackets-是编辑器，也是切图的好帮手" class="headerlink" title="Brackets-是编辑器，也是切图的好帮手"></a>Brackets-是编辑器，也是切图的好帮手</h4><p>这个不用多介绍了吧？Brackets是一个HTML/CSS/JavaScrip前端WEB集成开发环境，它提供了快捷键设置、快速编辑、实时预览、代码隐藏与搜索、界面优化、内建取色器、代码/样式扩展等功能。前端应该都认识，虽然不一定使用，但相信都听过其大名![Brackets]{<a href="http://http://brackets.io/}" target="_blank" rel="external">http://http://brackets.io/}</a>    </p>
+<h4 id="Pxcook-像素大师（仅建议win平台与Mac平台使用）"><a href="#Pxcook-像素大师（仅建议win平台与Mac平台使用）" class="headerlink" title="Pxcook-像素大师（仅建议win平台与Mac平台使用）"></a>Pxcook-像素大师（仅建议win平台与Mac平台使用）</h4><p>Adobe Air平台的跨平台软件，智能标注，单位转换，取色，psd切图，功能强大。使用时先安装Adobe Air,再安装Pxcook;<br>但是Adobe早已停止Air对linux平台的支持，只能找旧版的Air2.6安装，因此可以的话，linux的话还是选择其他比较好。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取色</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">切图</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/03/linux切图取色软件/">展开全文 >></a>
         </p>
       
 
@@ -676,7 +833,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">efi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,7 +857,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">webstorm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -701,10 +874,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">切图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
               </li>
             
             <div class="clearfix"></div>

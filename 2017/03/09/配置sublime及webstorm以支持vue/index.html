@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.maokz.com">
-  <title>Tag: 前端 | 猫客栈-夜猫归属</title>
+  <title>配置sublime及webstorm以支持vue | 猫客栈-夜猫归属</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人经验分享总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猫客栈-夜猫归属">
-<meta property="og:url" content="http://blog.maokz.com/tags/前端/index.html">
+  <meta name="description" content="简介因为sublime及webstorm原生并没有支持vue，故本文简单介绍如何配置以支持vue    
+sublimectrl+shift+P 搜索vue,安装 Vue Syntax Hightlight插件，点击回车键安装即可。重新打开便可高亮代码。另外， Vuejs Snippets也可以按需选择安装
+格式化vue文件，安装 HTML/CSS/JS Prettify,安装后 tools-&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置sublime及webstorm以支持vue">
+<meta property="og:url" content="http://blog.maokz.com/2017/03/09/配置sublime及webstorm以支持vue/index.html">
 <meta property="og:site_name" content="猫客栈-夜猫归属">
-<meta property="og:description" content="个人经验分享总结">
+<meta property="og:description" content="简介因为sublime及webstorm原生并没有支持vue，故本文简单介绍如何配置以支持vue    
+sublimectrl+shift+P 搜索vue,安装 Vue Syntax Hightlight插件，点击回车键安装即可。重新打开便可高亮代码。另外， Vuejs Snippets也可以按需选择安装
+格式化vue文件，安装 HTML/CSS/JS Prettify,安装后 tools-&amp;g">
+<meta property="og:updated_time" content="2017-03-09T08:43:18.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猫客栈-夜猫归属">
-<meta name="twitter:description" content="个人经验分享总结">
+<meta name="twitter:title" content="配置sublime及webstorm以支持vue">
+<meta name="twitter:description" content="简介因为sublime及webstorm原生并没有支持vue，故本文简单介绍如何配置以支持vue    
+sublimectrl+shift+P 搜索vue,安装 Vue Syntax Hightlight插件，点击回车键安装即可。重新打开便可高亮代码。另外， Vuejs Snippets也可以按需选择安装
+格式化vue文件，安装 HTML/CSS/JS Prettify,安装后 tools-&amp;g">
   
     <link rel="alternative" href="/atom.xml" title="猫客栈-夜猫归属" type="application/atom+xml">
   
@@ -172,36 +179,40 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-配置sublime及webstorm以支持vue" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/配置sublime及webstorm以支持vue/" class="archive-article-date">
-  	<time datetime="2017-03-09T08:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/配置sublime及webstorm以支持vue/">配置sublime及webstorm以支持vue</a>
+    <h1 class="article-title" itemprop="name">
+      配置sublime及webstorm以支持vue
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/09/配置sublime及webstorm以支持vue/" class="archive-article-date">
+  	<time datetime="2017-03-09T08:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>因为sublime及webstorm原生并没有支持vue，故本文简单介绍如何配置以支持vue    </p>
+<h4 id="sublime"><a href="#sublime" class="headerlink" title="sublime"></a>sublime</h4><p><code>ctrl+shift+P</code> 搜索vue,安装 <code>Vue Syntax Hightlight</code>插件，点击回车键安装即可。重新打开便可高亮代码。<br>另外， <code>Vuejs Snippets</code>也可以按需选择安装</p>
+<p>格式化vue文件，安装 <code>HTML/CSS/JS Prettify</code>,安装后 <code>tools-&gt;HTML/CSS/JS Prettify-&gt;set prettify preference</code>, 如下加上 <code>vue</code>就好了    </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;allowed_file_extensions&quot;: [&quot;htm&quot;, &quot;html&quot;, &quot;xhtml&quot;, &quot;shtml&quot;, &quot;xml&quot;, &quot;svg&quot;,&quot;vue&quot;]</div></pre></td></tr></table></figure>
+<h4 id="webStorm"><a href="#webStorm" class="headerlink" title="webStorm"></a>webStorm</h4><p><code>File-settings-Editor-Code Style-Live Templates</code><br>在 <code>html/xml</code>下按右侧加号，增加 <code>Live Templates</code>， <code>Abbreviation:vue</code>, <code>Description:vue template</code>,  <code>Template text</code>可以参考如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">    &lt;div class=&quot;class&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">    export default&#123;</div><div class="line">        components:&#123;&#125;，</div><div class="line">        computed:&#123;&#125;,</div><div class="line">        props:[],</div><div class="line">        data()&#123;</div><div class="line">            return&#123;</div><div class="line">            &#125;;</div><div class="line">         &#125;,</div><div class="line">         methods:&#123;</div><div class="line">         &#125;,</div><div class="line">         mounted()&#123;</div><div class="line">         &#125;</div><div class="line">     &#125;;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style scoped lang=&quot;less&quot; rel=&quot;stylesheet/less&quot;&gt;</div><div class="line">    .index&#123;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -225,115 +236,106 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.maokz.com/2017/03/09/配置sublime及webstorm以支持vue/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/05/fecs安装及配置/" class="archive-article-date">
-  	<time datetime="2017-03-05T10:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-05</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/05/fecs安装及配置/">fecs安装及配置</a>
-    </h1>
+  
+    <a href="/2017/03/07/linux下管理efi启动项/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux下管理efi启动项</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="配置sublime及webstorm以支持vue" data-title="配置sublime及webstorm以支持vue" data-url="http://blog.maokz.com/2017/03/09/配置sublime及webstorm以支持vue/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"maokz"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">fecs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/03/linux切图取色软件/" class="archive-article-date">
-  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/03/linux切图取色软件/">linux切图取色等软件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">取色</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">切图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -356,9 +358,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
