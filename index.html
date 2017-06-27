@@ -174,6 +174,77 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Fibonacci" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/27/Fibonacci/">JS的Fibonacci函数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/27/Fibonacci/" class="archive-article-date">
+  	<time datetime="2017-06-27T03:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Fibonacci函数"><a href="#Fibonacci函数" class="headerlink" title="Fibonacci函数"></a>Fibonacci函数</h3><p>斐波那契数列数列算是js学习比较经典的一个问题吧。今天突然想起来，就在此整理一下；一般使用的有两种方式:</p>
+<ul>
+<li><p>递归方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(fibo(5));</div><div class="line">function fibo(n)&#123;</div><div class="line">  if(n==1||n==2)&#123;</div><div class="line">    return 1;</div><div class="line">  &#125;</div><div class="line">  return fibo(n-1)+fibo(n-2);//return中执行递归</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>循环方式<br>循环方式作为js入门中，最先学习，也最容易理解；相当于一个推箱子游戏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">console.log(fibo(5));</div><div class="line"> function fibo(n)&#123;</div><div class="line"> 	var fistNum = 1,secNum =1，fiboSum = 0;</div><div class="line"> 	for(var i = 0;i&lt;n-2;i++)&#123;//由于前两项已经直接给出，因此循环判断条件取n-2</div><div class="line"> 		fiboSum = fistNum +secNum;//先计算当前最后一项的数值</div><div class="line"> 		fistNum = secNum;把第二项的值赋给前一项；</div><div class="line"> 		secNum = fiboSum;把当前最后一项的值赋给第二项。用于下一次计算（有下一次的话）</div><div class="line"> 	&#125;</div><div class="line"> 	return fiboSum;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当然，以上两种主流的思想。使用循环的话，若所需数列的位数不高，直接写入数组也是可以的。利用数组取出数值。在此就不写出来让各位见笑了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/27/Fibonacci/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-配置sublime及webstorm以支持vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -213,10 +284,6 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
         		</li>
       		 
@@ -226,6 +293,10 @@ var _hmt = _hmt || [];
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -374,7 +445,7 @@ efibootmgr -A -b X   //禁用标号为X的启动项
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">fecs</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -382,7 +453,7 @@ efibootmgr -A -b X   //禁用标号为X的启动项
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">fecs</a>
         		</li>
       		
 		</ul>
@@ -393,6 +464,72 @@ efibootmgr -A -b X   //禁用标号为X的启动项
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/05/fecs安装及配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux创作类软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/linux创作类软件/">linux图像创作类软件</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/03/linux创作类软件/" class="archive-article-date">
+  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Krita"><a href="#Krita" class="headerlink" title="Krita"></a>Krita</h4><p>Krita是一个免费、开源的专业绘画软件。它由一些希望让每个人都能用得起创作工具的艺术家创造。概念艺术图，数字绘景，插画和漫画：![官网]{<a href="https://krita.org/zh/}" target="_blank" rel="external">https://krita.org/zh/}</a>     </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">绘图</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/03/linux创作类软件/">展开全文 >></a>
         </p>
       
 
@@ -473,72 +610,6 @@ efibootmgr -A -b X   //禁用标号为X的启动项
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/03/linux切图取色软件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-linux创作类软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/linux创作类软件/">linux图像创作类软件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/03/linux创作类软件/" class="archive-article-date">
-  	<time datetime="2017-03-03T12:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Krita"><a href="#Krita" class="headerlink" title="Krita"></a>Krita</h4><p>Krita是一个免费、开源的专业绘画软件。它由一些希望让每个人都能用得起创作工具的艺术家创造。概念艺术图，数字绘景，插画和漫画：![官网]{<a href="https://krita.org/zh/}" target="_blank" rel="external">https://krita.org/zh/}</a>     </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">绘图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/03/linux创作类软件/">展开全文 >></a>
         </p>
       
 
@@ -824,15 +895,7 @@ efibootmgr -A -b X   //禁用标号为X的启动项
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">fecs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">sublime</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -840,31 +903,11 @@ efibootmgr -A -b X   //禁用标号为X的启动项
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">efi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">取色</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">切图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
+                <a href="javascript:void(0)" class="js-tag color3">sublime</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -873,6 +916,38 @@ efibootmgr -A -b X   //禁用标号为X的启动项
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绘图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">efi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">fecs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">取色</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">切图</a>
               </li>
             
             <div class="clearfix"></div>
