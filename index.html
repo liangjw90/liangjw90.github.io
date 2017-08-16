@@ -174,6 +174,88 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sublime绿色版，升级时插件及迁移操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/16/sublime绿色版，升级时插件及迁移操作/">sublime3绿色版，升级时插件及迁移操作</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/16/sublime绿色版，升级时插件及迁移操作/" class="archive-article-date">
+  	<time datetime="2017-08-16T13:05:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>若使用sublime绿色版，手动进行版本更新时，进行以下操作可直接迁移插件和配置；</p>
+<p>进入sublime根目录下的Data目录：</p>
+<h2 id="跳过以下文件及文件夹："><a href="#跳过以下文件及文件夹：" class="headerlink" title="跳过以下文件及文件夹："></a>跳过以下文件及文件夹：</h2><ul>
+<li>目录：Backup、cache、index</li>
+<li>文件：KEEPME</li>
+</ul>
+<h2 id="应该拷贝旧版本以下文件或文件夹到软件新版本相应目录："><a href="#应该拷贝旧版本以下文件或文件夹到软件新版本相应目录：" class="headerlink" title="应该拷贝旧版本以下文件或文件夹到软件新版本相应目录："></a>应该拷贝旧版本以下文件或文件夹到软件新版本相应目录：</h2><ul>
+<li><p>Installed Packages目录 ：通过package control安装的插件</p>
+</li>
+<li><p>Local\Session.sublime_session ：记录打开记录、侧边栏配置等</p>
+</li>
+<li><p>Local\License.sublime_license是记录st注册信息，若非同一版本号的绿色版，拷该文件解决不了注册问题</p>
+</li>
+<li><p>Packages ：手动安装插件</p>
+</li>
+<li><p>Settings：存放侧边栏增强插件配置文件SideBarEnhancements.json</p>
+</li>
+</ul>
+<p>###文件拷完，接下来就是测试下绿色升级版各插件是否能正常使用了！</p>
+<h2 id="若升级后发现中文变成口口口，一般是由于使用高分屏，导致系统dpi不为1-0导致的。可以进行一下操作；"><a href="#若升级后发现中文变成口口口，一般是由于使用高分屏，导致系统dpi不为1-0导致的。可以进行一下操作；" class="headerlink" title="若升级后发现中文变成口口口，一般是由于使用高分屏，导致系统dpi不为1.0导致的。可以进行一下操作；"></a>若升级后发现中文变成口口口，一般是由于使用高分屏，导致系统dpi不为1.0导致的。可以进行一下操作；</h2><p>sublime text3中， <code>Preference</code> - <code>Settings-User</code>,添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"dpi_scale"</span>: 1.0,</div></pre></td></tr></table></figure></p>
+<p>同时，在这里可以修默认字体，字体大小等。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/16/sublime绿色版，升级时插件及迁移操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Fibonacci" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -587,11 +669,11 @@ efibootmgr -A -b X   //禁用标号为X的启动项
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -895,7 +977,11 @@ efibootmgr -A -b X   //禁用标号为X的启动项
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">efi</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -903,11 +989,15 @@ efibootmgr -A -b X   //禁用标号为X的启动项
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sublime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -923,19 +1013,11 @@ efibootmgr -A -b X   //禁用标号为X的启动项
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">绘图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">efi</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
